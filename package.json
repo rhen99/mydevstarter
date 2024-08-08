@@ -1,0 +1,16 @@
+{
+  "name": "mydevstarter",
+  "version": "1.0.0",
+  "description": "A CLI to do your development setups",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arhen Santiago",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^10.1.8",
+    "nanospinner": "^1.1.0"
+  }
+}
