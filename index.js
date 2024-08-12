@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import inquirer from "inquirer";
-import { generateBasicWebsite, generateReactApp } from "../starterFunctions.js";
+import { generateBasicWebsite, generateReactApp } from "./starterFunctions.js";
 async function run() {
   await initialPrompt();
 }

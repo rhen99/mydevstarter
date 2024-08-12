@@ -1,8 +1,8 @@
 {
   "name": "mydevstarter",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A CLI to do your development setups",
-  "main": ".bin/index.js",
+  "main": "index.js",
   "type": "module",
   "repository": "https://github.com/rhen99/mydevstarter",
   "scripts": {
