@@ -2,7 +2,7 @@
   "name": "mydevstarter",
   "version": "1.0.3",
   "description": "A CLI to do your development setups",
-  "main": "index.js",
+  "main": ".bin/index.js",
   "type": "module",
   "repository": "https://github.com/rhen99/mydevstarter",
   "scripts": {
