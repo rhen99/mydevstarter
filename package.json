@@ -1,6 +1,6 @@
 {
   "name": "mydevstarter",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A CLI to do your development setups",
   "main": ".bin/index.js",
   "type": "module",
