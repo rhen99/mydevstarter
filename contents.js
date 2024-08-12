@@ -48,3 +48,16 @@ ul{
 export const JSContent = `
 console.log('working...');
 `;
+export const ReactAppContent = `
+function App() {
+
+  return (
+    <>
+      <h1>Hello there.</h1>
+    </>
+  )
+}
+
+export default App
+
+`;
