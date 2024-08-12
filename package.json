@@ -4,9 +4,11 @@
   "description": "A CLI to do your development setups",
   "main": "index.js",
   "type": "module",
+  "repository": "https://github.com/rhen99/mydevstarter",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": "./index.js",
   "author": "Arhen Santiago",
   "license": "MIT",
   "dependencies": {
