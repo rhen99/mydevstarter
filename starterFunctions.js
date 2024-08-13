@@ -1,5 +1,3 @@
-import path from "path";
-import { fileURLToPath } from "url";
 import util from "node:util";
 import { exec } from "node:child_process";
 import fs from "node:fs/promises";
@@ -19,24 +17,18 @@ export async function generateBasicWebsite() {
   try {
     await sleep();
     await fs.mkdir(
-      path.dirname(fileURLToPath(import.meta.url)) + "/starter",
+      import.meta.dirname + "/starter",
       { recursive: true },
       (err) => {
         if (err) throw err;
       }
     );
     await fs.writeFile(
-      path.dirname(fileURLToPath(import.meta.url)) + "/starter/index.html",
+      import.meta.dirname + "/starter/index.html",
       HTMLContent
     );
-    await fs.writeFile(
-      path.dirname(fileURLToPath(import.meta.url)) + "/starter/style.css",
-      CSSContent
-    );
-    await fs.writeFile(
-      path.dirname(fileURLToPath(import.meta.url)) + "/starter/main.js",
-      JSContent
-    );
+    await fs.writeFile(import.meta.dirname + "/starter/style.css", CSSContent);
+    await fs.writeFile(import.meta.dirname + "/starter/main.js", JSContent);
     spinner.success({ text: "Starter done." });
   } catch (err) {
     spinner.error({ text: "Something went wrong..." });
@@ -56,28 +48,21 @@ export async function generateReactApp() {
     );
 
     await fs.writeFile(
-      path.dirname(fileURLToPath(import.meta.url)) + "/starter/src/App.jsx",
+      import.meta.dirname + "/starter/src/App.jsx",
       ReactAppContent
     );
     await fs.writeFile(
-      path.dirname(fileURLToPath(import.meta.url)) + "/starter/src/index.css",
+      import.meta.dirname + "/starter/src/index.css",
       CSSContent
     );
-    await fs.writeFile(
-      path.dirname(fileURLToPath(import.meta.url)) + "/starter/README.md",
-      ""
-    );
-    await fs.unlink(
-      path.dirname(fileURLToPath(import.meta.url)) + "/starter/src/App.css",
-      (err) => {
-        if (err) {
-          console.error(`Error removing file ${err}`);
-        }
+    await fs.writeFile(import.meta.dirname + "/starter/README.md", "");
+    await fs.unlink(import.meta.dirname + "/starter/src/App.css", (err) => {
+      if (err) {
+        console.error(`Error removing file ${err}`);
       }
-    );
+    });
     await fs.unlink(
-      path.dirname(fileURLToPath(import.meta.url)) +
-        "/starter/src/assets/react.svg",
+      import.meta.dirname + "/starter/src/assets/react.svg",
       (err) => {
         if (err) {
           console.error(`Error removing file ${err}`);
@@ -85,7 +70,7 @@ export async function generateReactApp() {
       }
     );
     await fs.mkdir(
-      path.dirname(fileURLToPath(import.meta.url)) + "/starter/src/components",
+      import.meta.dirname + "/starter/src/components",
       { recursive: true },
       (err) => {
         if (err) throw err;
